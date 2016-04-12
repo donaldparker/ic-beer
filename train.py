@@ -15,8 +15,8 @@ def store_raw_images():
   
   if not os.path.exists('neg'):
     os.makedirs('neg')
-
-  pic_num = 532
+  # for pos images 50x50, neg 100x100
+  pic_num = 797
   for i in neg_images_urls.split('\n'):
     try:
       print(i)
@@ -29,7 +29,11 @@ def store_raw_images():
     except Exception as e:
       print(str(e ))
       
-store_raw_images()
+# store_raw_images()
+
+
+
+
 def find_uglies():
   for file_type in ['neg']:
     for img in os.listdir(file_type):
@@ -46,3 +50,17 @@ def find_uglies():
         except Exception as e:
           print(str(e))
 # find_uglies()
+
+
+def create_pos_n_neg():
+  for file_type in ['neg']:
+    for img in os.listdir(file_type):
+      if file_type == 'neg':
+        line = file_type + '/' + img + '\n'
+        with open('bg.txt', 'a') as f:
+          f.write(line)
+      elif file_type == 'pos':
+        line = file_type + '/' + img + ' 1 0 50 50 \n'
+        with open('info.dat', 'a') as f:
+          f.write(line)
+create_pos_n_neg()

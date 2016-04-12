@@ -19,7 +19,12 @@ def store_raw_images():
   for i in neg_images_urls.split('\n'):
     try:
       print(i)
-      # urllib.request
+      img_path = "neg/" + str(pic_num) + ".jpg"
+      urllib.request.urlretrieve(i, img_path)
+      img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+      resize_image = cv2.resize(img, (100,100))
+      cv2.imwrite(img_path, resize_image)
+      pic_num += 1
     except Exception as e:
       print(str(e ))
       

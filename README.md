@@ -1,4 +1,5 @@
 # ic-beer
+Currently nevative images are 100 x 100, positives at 50 x 50 and trained at 20 x 20
 ### install opencv3 on osx via brew
 ```
 brew install opencv3 --with-contrib --with-cuda --with-ffmpeg --with-gphoto2 --with-gstreamer --with-tbb

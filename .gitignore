@@ -4,3 +4,4 @@
 /uglies
 **/.DS_Store
 positives.vec
+**/*.pyc

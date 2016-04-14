@@ -29,7 +29,7 @@ def store_raw_images():
     except Exception as e:
       print(str(e ))
       
-store_raw_images()
+# store_raw_images()
 
 
 
@@ -63,4 +63,4 @@ def create_pos_n_neg():
         line = file_type + '/' + img + ' 1 0 50 50 \n'
         with open('info.dat', 'a') as f:
           f.write(line)
-# create_pos_n_neg()
+create_pos_n_neg()

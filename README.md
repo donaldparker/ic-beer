@@ -27,7 +27,7 @@ Start Training
 ```
 
 #### 3. train network
-something to note, I was trying 10 stages but since my step 2 crapped out at 1000 (even thought I have 1650 Images)
+something to note, I was trying 10 stages but since my step 2 crapped out at 1000 (even thought I have 1650 Images), I couldn't go beyone stage 7... and that even took some finesssing 
 ```
 /usr/local/Cellar/opencv3/3.1.0_2/bin/opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 900 -numNeg 450 -numStages 10 -w 25 -h 25
 ```

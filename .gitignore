@@ -2,6 +2,6 @@
 /info
 /neg
 /uglies
-**/.DS_Store
+**/*.DS_Store
 positives.vec
 **/*.pyc
